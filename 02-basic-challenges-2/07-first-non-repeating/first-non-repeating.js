@@ -6,7 +6,10 @@ function findFirstNonRepeatingCharacter(str) {
         charCount[char] = (charCount[char] || 0) + 1;
     }
 
+    // another loop to match the string characters against
+    // the completed object from our previous loop.
     for(const char of str) {
+        // first object key to equal one gets returned
         if(charCount[char] === 1){
             return char;
         }
